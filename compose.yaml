@@ -1,0 +1,12 @@
+services:
+  aqua:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    environment:
+      AQUA_DATA_DIR: /app/data
+      AQUA_ALLOWED_HOSTS: ${AQUA_ALLOWED_HOSTS:-127.0.0.1,localhost}
+      AQUA_ENABLE_DOCS: ${AQUA_ENABLE_DOCS:-0}

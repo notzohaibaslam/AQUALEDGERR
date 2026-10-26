@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AquaLedger Pro 5 | RO Plant OS</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body>
+<section id="auth-screen" class="auth-screen">
+ <div class="auth-shell">
+  <div class="auth-brand"><span class="brand-icon">◈</span> AquaLedger <span class="brand-pro">PRO</span></div>
+  <div class="auth-card">
+   <div class="eyebrow">WATER BUSINESS OPERATING SYSTEM</div>
+   <h1 id="auth-title">Welcome back</h1>
+   <p class="muted">Manage orders, multi-size bottle inventory, collections and routes in one place.</p>
+   <form id="auth-form">
+    <label id="login-identifier-row">Login ID or email<input name="identifier" required autocomplete="username" autocapitalize="none" placeholder="Login ID or existing email"></label>
+    <label>Password<input type="password" required name="password" minlength="8" maxlength="200" autocomplete="current-password" placeholder="At least 8 characters"></label>
+    <button class="btn btn-primary full" id="auth-submit">Sign in</button>
+   </form>
+   <div class="auth-switch">Plant owner? Your AquaLedger provider creates your account. Staff accounts are created by your plant owner.</div>
+   <div class="auth-foot">Secure plant login • Contact your provider for a new plant account.</div>
+  </div>
+ </div>
+ <aside class="auth-visual"><div class="glass-panel"><div class="live-label">BUILT FOR PAKISTAN'S RO OPERATORS</div><div class="hero-drop">◈</div><h2>Everything your water business needs to run.</h2><p>Recurring customers. Routes. Bottle circulation. Receivables. Plant production. Water quality. All connected.</p><div class="pill-row"><span>12L · 14L · 19L · Custom</span><span>PKR Accounting</span><span>Multi-user</span></div></div></aside>
+</section>
+<div id="app" class="app" hidden>
+ <div id="shade" class="shade" hidden></div>
+ <aside class="sidebar" id="sidebar">
+  <div class="side-head"><div class="brand"><span class="brand-icon">◈</span><span>AquaLedger <em>PRO</em></span></div><div class="workspace-label">WATER PLANT WORKSPACE</div><div class="plant-chip" id="plant-label">Your water plant</div></div>
+  <nav id="nav">
+   <div class="nav-group">OVERVIEW</div>
+   <button data-view="dashboard" class="nav-item active"><span>◫</span> Dashboard</button>
+   <button data-view="customers" class="nav-item"><span>♙</span> Customers</button>
+   <button data-view="orders" class="nav-item"><span>▤</span> Delivery orders</button>
+   <button data-view="deliveries" class="nav-item"><span>↗</span> Deliveries</button>
+   <button data-view="invoices" class="nav-item"><span>▣</span> Invoice center</button>
+   <button data-view="subscriptions" class="nav-item"><span>↻</span> Recurring plans</button>
+   <div class="nav-group">OPERATIONS</div>
+   <button data-view="payments" class="nav-item"><span>₨</span> Payments</button>
+   <button data-view="collections" class="nav-item"><span>◎</span> Collections desk</button>
+   <button data-view="products" class="nav-item"><span>▱</span> Bottle catalog</button>
+   <button data-view="stock" class="nav-item"><span>◈</span> Bottle inventory</button>
+   <button data-view="production" class="nav-item"><span>≋</span> Production</button>
+   <button data-view="routes" class="nav-item"><span>⇢</span> Routes</button>
+   <button data-view="quality" class="nav-item"><span>◉</span> Quality logs</button>
+   <button data-view="maintenance" class="nav-item"><span>⚙</span> Maintenance</button>
+   <div class="nav-group">BUSINESS</div>
+   <button data-view="expenses" class="nav-item"><span>◧</span> Expenses</button>
+   <button data-view="reports" class="nav-item"><span>▥</span> Reports</button>
+   <button data-view="staff" class="nav-item"><span>♟</span> Team accounts</button>
+   <button data-view="settings" class="nav-item"><span>⚒</span> Settings & backup</button>
+  </nav>
+  <div class="side-bottom"><div class="avatar" id="avatar">A</div><div class="user-meta"><strong id="profile-name">Owner</strong><small id="profile-role">owner</small></div><button id="password-change" title="Change password" class="logout">⚿</button><button id="logout" title="Sign out" class="logout">⇥</button></div>
+ </aside>
+ <div class="main-area">
+  <header class="topbar"><button id="menu-toggle" class="menu-toggle">☰</button><div class="breadcrumbs">Workspace <span>/</span> <strong id="crumb">Dashboard</strong></div><div class="top-actions"><span class="today-chip" id="today-chip"></span><span class="online-chip"><b></b> Connected</span></div></header>
+  <main class="content"><div class="page-intro"><div><div class="eyebrow" id="page-overline">OPERATIONS OVERVIEW</div><h1 id="page-title">Dashboard</h1><p class="muted" id="page-desc">Monitor what's happening at your plant.</p></div><div class="page-actions" id="page-actions"></div></div><div id="page-body" aria-live="polite"></div></main>
+  <footer class="footer">AquaLedger Pro v5.0 · Pakistan edition · <span>Figures in PKR unless noted</span></footer>
+ </div>
+</div>
+<dialog id="modal"><div class="dialog-top"><h2 id="modal-title"></h2><button class="icon-btn" id="close-modal">✕</button></div><div id="modal-body"></div></dialog>
+<div id="toast" role="status" class="toast" hidden></div>
+<script src="/static/app.js" defer></script></body></html>

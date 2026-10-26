@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Platform Control | AquaLedger Pro</title><link rel="stylesheet" href="/static/admin.css"></head>
+<body>
+<div id="signin" class="signin-layout">
+ <div class="login-panel">
+  <div class="brand"><span class="drop">◈</span> AquaLedger <small>PLATFORM</small></div>
+  <div class="pretitle">PRIVATE ADMINISTRATOR ACCESS</div>
+  <h1>Your command center.</h1>
+  <p class="sub">Only the software provider can create new RO plant accounts. Plant owners manage their own staff inside their workspace.</p>
+  <form id="login-form" class="fields">
+   <label>Master Login ID <em>*</em><input name="username" required autocomplete="username" placeholder="Your admin login"></label>
+   <label>Master password <em>*</em><input type="password" name="password" required autocomplete="current-password"></label>
+   <button class="primary" id="login-btn">Sign in to platform</button>
+  </form>
+  <p class="helper">First-time setup: run <code>create_admin_windows.bat</code>, or start the Windows launcher to create your private admin account.</p>
+  <a href="/" class="smalllink">Go to plant sign in</a>
+ </div>
+ <div class="art"><div class="orb"></div><div class="art-content"><div class="eyebrow">ONE PLATFORM. MANY PLANTS.</div><h2>Every business has its own workspace.</h2><div class="features"><div>◈ <span>Administrator-provisioned plant accounts</span></div><div>◈ <span>Owner-managed employee logins</span></div><div>◈ <span>Plant data isolated server-side</span></div></div></div></div>
+</div>
+<div id="console" hidden>
+ <aside class="sidebar"><div class="brand"><span class="drop">◈</span> AquaLedger <small>PRO</small></div><div class="navlabel">PLATFORM</div><button class="nav active" id="nav-plants">▦ <span>Manage plants</span></button><button class="nav" id="nav-activity">◷ <span>Admin activity</span></button><a href="/" class="nav">↗ <span>Plant login</span></a><div class="sidebar-bottom"><div class="identity"><div class="avatar">A</div><div><b id="admin-name">Administrator</b><small>Platform administrator</small></div></div><button class="nav" id="change-master">⚿ Change master password</button><button class="nav signout" id="logout">↩ Sign out</button></div></aside>
+ <main class="main"><div class="topbar"><span>Platform Management <b>/</b> <span id="breadcrumb">Plants</span></span><span class="secure-dot">● LOCAL / PRIVATE ACCESS</span></div>
+ <div class="content"><div class="titlebar"><div><div class="eyebrow">AQUALEDGER PRO / SERVICE PROVIDER</div><h1 id="page-title">Client plants</h1><p class="sub" id="page-sub">Create and manage independent water plant workspaces.</p></div><button class="primary" id="new-plant">+ Create plant account</button></div>
+ <div id="stats" class="stats"></div><section id="plants-section" class="panel"><div class="panel-top"><div><h2>Registered plants</h2><p class="sub">Only you can create, suspend, or restore a plant account.</p></div><input id="search" placeholder="Search plants or owners..." aria-label="Search plants"></div><div id="plants-table" class="scroll-x"></div></section>
+ <section id="activity-section" class="panel" hidden><div class="panel-top"><div><h2>Administrator activity</h2><p class="sub">Recent account actions performed by platform admins.</p></div></div><div id="activity-list" class="scroll-x"></div></section>
+ <div class="callout">Security boundary: platform administrators can manage tenant accounts and see aggregate counts. They do not directly open a tenant's invoices, customer addresses, or operational records in this panel. Plant owners can create managers and drivers, but not new plants.</div>
+ </div></main>
+</div>
+<dialog id="dialog"><div class="dialog-top"><div><div class="eyebrow" id="dialog-kicker">CLIENT ONBOARDING</div><h2 id="dialog-title">Create a plant</h2></div><button class="icon" id="dialog-close" aria-label="Close">×</button></div><div id="dialog-body"></div></dialog>
+<div id="toast" role="status" hidden></div><script src="/static/admin.js" defer></script></body></html>
